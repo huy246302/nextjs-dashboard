@@ -1,4 +1,4 @@
-export const post = [
+export const posts = [
     {
         id: 1,
         title: 'Breaking News: Team A Wins Championship!',
@@ -6,7 +6,7 @@ export const post = [
         category: 'Sports',
         author: 'John Doe',
         date: '2024-07-05',
-        imageUrl: '../../public/1.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const post = [
         category: 'Sports',
         author: 'Jane Smith',
         date: '2024-07-04',
-        imageUrl: '../../public/2.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const post = [
         category: 'Sports',
         author: 'Michael Brown',
         date: '2024-07-03',
-        imageUrl: '../../public/3.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const post = [
         category: 'Sports',
         author: 'Emily Davis',
         date: '2024-07-02',
-        imageUrl: '../../public/4.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ export const post = [
         category: 'Sports',
         author: 'Chris Wilson',
         date: '2024-07-01',
-        imageUrl: '../../public/5.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ export const post = [
         category: 'Sports',
         author: 'John Doe',
         date: '2024-06-30',
-        imageUrl: '../../public/6.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ export const post = [
         category: 'Sports',
         author: 'Jane Smith',
         date: '2024-06-29',
-        imageUrl: '../../public/7.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ export const post = [
         category: 'Sports',
         author: 'Michael Brown',
         date: '2024-06-28',
-        imageUrl: '../../public/8.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ export const post = [
         category: 'Sports',
         author: 'Emily Davis',
         date: '2024-06-27',
-        imageUrl: '../../public/9.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 10,
@@ -87,7 +87,7 @@ export const post = [
         category: 'Sports',
         author: 'Chris Wilson',
         date: '2024-06-26',
-        imageUrl: '../../public/10.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ export const post = [
         category: 'Sports',
         author: 'John Doe',
         date: '2024-06-25',
-        imageUrl: '../../public/1.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 12,
@@ -105,7 +105,7 @@ export const post = [
         category: 'Sports',
         author: 'Jane Smith',
         date: '2024-06-24',
-        imageUrl: '../../public/5.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 13,
@@ -114,7 +114,7 @@ export const post = [
         category: 'Sports',
         author: 'Michael Brown',
         date: '2024-06-23',
-        imageUrl: '../../public/3.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 14,
@@ -123,7 +123,7 @@ export const post = [
         category: 'Sports',
         author: 'Emily Davis',
         date: '2024-06-22',
-        imageUrl: '../../public/7.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
     {
         id: 15,
@@ -132,6 +132,6 @@ export const post = [
         category: 'Sports',
         author: 'Chris Wilson',
         date: '2024-06-21',
-        imageUrl: '../../public/9.jpg',
+        imageUrl: 'https://via.placeholder.com/400x200',
     },
 ]

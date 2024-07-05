@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { posts } from './mockdata/post';
 
 export default function Home() {
     return (
@@ -18,8 +19,17 @@ export default function Home() {
                 {/* Latest News Section */}
                 <section className="mb-8 bg-gray-200 rounded-lg shadow-md p-6">
                     <h2 className="text-2xl font-bold mb-4">Latest News</h2>
-                    {/* Latest news components */}
-                    {/* Example: <LatestNews /> */}
+                    {posts.map(post => (
+                        <section key={post.id} className="mb-8 bg-white rounded-lg shadow-md p-6">
+                            <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
+                            <p className="text-gray-700">{post.content}</p>
+                            <div className="flex justify-between mt-4">
+                                <p className="text-sm text-gray-500">{post.author}</p>
+                                <p className="text-sm text-gray-500">{post.date}</p>
+                            </div>
+                            <img src={post.imageUrl} alt={post.title} className="mt-4 rounded-lg shadow-md" />
+                        </section>
+                    ))}
                 </section>
 
                 {/* Sports Categories Section */}
