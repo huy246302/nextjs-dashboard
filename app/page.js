@@ -20,15 +20,17 @@ export default function Home() {
                 <section className="mb-8 bg-gray-200 rounded-lg shadow-md p-6">
                     <h2 className="text-2xl font-bold mb-4">Latest News</h2>
                     {posts.map(post => (
-                        <section key={post.id} className="mb-8 bg-white rounded-lg shadow-md p-6">
-                            <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
-                            <p className="text-gray-700">{post.content}</p>
-                            <div className="flex justify-between mt-4">
-                                <p className="text-sm text-gray-500">{post.author}</p>
-                                <p className="text-sm text-gray-500">{post.date}</p>
+                        <Link key={post.id} href={`/blog/${post.id}`}>
+                            <div className="block mb-8 bg-white rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg">
+                                <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
+                                <p className="text-gray-700">{post.content}</p>
+                                <div className="flex justify-between mt-4">
+                                    <p className="text-sm text-gray-500">{post.author}</p>
+                                    <p className="text-sm text-gray-500">{post.date}</p>
+                                </div>
+                                <img src={post.imageUrl} alt={post.title} className="mt-4 rounded-lg shadow-md" />
                             </div>
-                            <img src={post.imageUrl} alt={post.title} className="mt-4 rounded-lg shadow-md" />
-                        </section>
+                        </Link>
                     ))}
                 </section>
 
