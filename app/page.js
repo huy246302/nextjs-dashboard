@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { blogPosts, posts } from './mockdata/post';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
     return (
           <div className="min-h-screen bg-gray-100 flex items-center justify-center">
             <main className="max-w-4xl mx-auto py-8 px-4 text-center">
+                <SpeedInsights />
                 <h1 className="text-4xl font-bold mb-8 hover:animate-bounce">
                     Welcome to Sports News
                 </h1>
