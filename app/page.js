@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { posts } from './mockdata/post';
+import { blogPosts, posts } from './mockdata/post';
 
 export default function Home() {
     return (
@@ -19,7 +19,7 @@ export default function Home() {
                 {/* Latest News Section */}
                 <section className="mb-8 bg-gray-200 rounded-lg shadow-md p-6">
                     <h2 className="text-2xl font-bold mb-4">Latest News</h2>
-                    {posts.map(post => (
+                    {blogPosts.map(post => (
                         <Link key={post.id} href={`/blog/${post.id}`}>
                             <div className="block mb-8 bg-white rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg">
                                 <h2 className="text-2xl font-bold mb-4">{post.title}</h2>

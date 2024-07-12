@@ -1,4 +1,4 @@
-export const posts = [
+export const blogPosts = [
     {
         id: 1,
         title: 'Breaking News: Team A Wins Championship!',
