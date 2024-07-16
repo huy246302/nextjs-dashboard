@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Image from 'next/image';
 
 export default function Home() {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -13,8 +14,8 @@ export default function Home() {
       try {
         const response = await fetch('/api/blogs');
         const data = await response.json();
+        console.log('Fetched blog posts:', data); // Log the fetched data
         setBlogPosts(data);
-        console.log(data);
       } catch (error) {
         console.error('Error fetching blog posts:', error);
       } finally {
@@ -54,7 +55,21 @@ export default function Home() {
                   <p className="text-sm text-gray-500">{blog.author}</p>
                   <p className="text-sm text-gray-500">{blog.date}</p>
                 </div>
-                <img src={blog.imageUrl} alt={blog.title} className="mt-4 rounded-lg shadow-md" />
+                {blog.image_url ? (
+                  <div className="mt-4 relative w-full" style={{ height: '300px' }}>
+                  <Image
+                    src={blog.image_url}
+                    alt={blog.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg shadow-md"
+                  />
+                </div>
+                ) : (
+                  <div className="mt-4">
+                    <p>No image available</p>
+                  </div>
+                )}
               </div>
             </Link>
           ))}
