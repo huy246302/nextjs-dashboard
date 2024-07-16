@@ -1,18 +1,23 @@
 import { notFound } from 'next/navigation';
-import { blogPosts, posts } from '@/app/mockdata/post';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
+    // Fetch blog IDs from your database or API
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs`);
+    const blogPosts = await res.json();
+
     return blogPosts.map(post => ({
         id: post.id.toString(),
     }));
 }
 
-export default function Post({ params }) {
+export default async function Post({ params }) {
     const { id } = params;
-    const post = blogPosts.find(post => post.id.toString() === id);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs/${id}`);
+    const post = await res.json();
 
-    if (!post) {
+    if (!post || post.error) {
         notFound();
     }
 
@@ -25,8 +30,9 @@ export default function Post({ params }) {
                 <p className="text-sm text-gray-500">{post.author}</p>
                 <p className="text-sm text-gray-500">{post.date}</p>
             </div>
-            <img src={post.imageUrl} alt={post.title} className="rounded-lg shadow-md" />
+            <div>
+            <Image fill={true} src={post.imageUrl} alt={post.title} className="rounded-lg shadow-md" />
+            </div>
         </div>
     );
 }
-
